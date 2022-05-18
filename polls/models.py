@@ -21,3 +21,6 @@ class Choice(models.Model):
 
     def __str__(self):
         return self.choice_text
+    
+    def is_positive(self):
+        return self.votes > 0 ? true : false
