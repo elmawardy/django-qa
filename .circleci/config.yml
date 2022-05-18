@@ -7,9 +7,8 @@ jobs:
     steps:
       - checkout
       - run: pipenv install --dev
-      - run: pipenv shell
-      - run: "coverage run manage.py test --parallel"
-      - run: "coverage lcov"
+      - run: "pipenv run coverage run manage.py test --parallel"
+      - run: "pipenv run coverage lcov"
 
 workflows:
   cicd:
