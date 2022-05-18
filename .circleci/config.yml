@@ -11,7 +11,7 @@ jobs:
       - checkout
       - run: pipenv install --dev
       - run: "pipenv run coverage run manage.py test --parallel"
-      - run: "pipenv run coverage lcov"
+      - run: "pipenv run coverage xml"
       - sonarcloud/scan
 
 workflows:
