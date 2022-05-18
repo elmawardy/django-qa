@@ -24,3 +24,6 @@ class Choice(models.Model):
     
     def is_positive(self):
         return true if self.votes > 0 else false
+    
+    def is_negative(self):
+        return true if self.votes < 0 else false
