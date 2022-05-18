@@ -1,5 +1,8 @@
 version: 2.1
 
+orbs:
+  sonarcloud: sonarsource/sonarcloud@1.0.2
+
 jobs:
   test:
     docker:
@@ -9,6 +12,7 @@ jobs:
       - run: pipenv install --dev
       - run: "pipenv run coverage run manage.py test --parallel"
       - run: "pipenv run coverage lcov"
+      - sonarcloud/scan
 
 workflows:
   cicd:
