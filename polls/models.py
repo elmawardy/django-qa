@@ -23,7 +23,7 @@ class Choice(models.Model):
         return self.choice_text
     
     def is_positive(self):
-        return true if self.votes > 0 else false
+        return True if self.votes > 0 else False
     
     def is_negative(self):
-        return true if self.votes < 0 else false
+        return True if self.votes < 0 else False
