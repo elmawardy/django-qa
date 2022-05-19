@@ -17,7 +17,7 @@ jobs:
     steps:
       - checkout
       - run: pipenv install --dev
-      - run: "pipenv run coverage run manage.py test --parallel"
+      - run: "pipenv run coverage run manage.py test"
       - run: "pipenv run coverage xml"
       - sonarcloud/scan
 
