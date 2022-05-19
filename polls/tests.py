@@ -28,5 +28,4 @@ class ChoiceTest(TestCase):
     def test_is_positive(self):
         test1 = Question.objects.get(question_text="test1")
         c1 = Choice.objects.get(question=test1)
-        c1.votes = 1
         self.assertEqual(c1.is_positive(), True)
