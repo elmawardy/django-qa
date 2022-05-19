@@ -7,6 +7,13 @@ jobs:
   test:
     docker:
       - image: cimg/python:3.8
+      - image: mariadb:10.6.7
+        environment:
+          MARIADB_USER: admin
+          MARIADB_PASSWORD: password
+          MARIADB_ROOT_PASSWORD: password
+          MARIADB_DATABASE: elm_django
+
     steps:
       - checkout
       - run: pipenv install --dev

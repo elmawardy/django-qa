@@ -131,5 +131,5 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-if 'test' in sys.argv:
-    DATABASES['default'] = {'ENGINE': 'django.db.backends.sqlite3'}
+# if 'test' in sys.argv:
+#     DATABASES['default'] = {'ENGINE': 'django.db.backends.sqlite3'}
